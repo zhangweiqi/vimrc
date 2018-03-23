@@ -33,116 +33,118 @@ function MyDiff()
 endfunction
 
 
-"ÏÔÊ¾ĞĞºÅ
+"æ˜¾ç¤ºè¡Œå·
 set nu
 
-"Æô¶¯Ê±ÒşÈ¥Ô®ÖúÌáÊ¾
+"å¯åŠ¨æ—¶éšå»æ´åŠ©æç¤º
 set shortmess=atI
 
-"Óï·¨¸ßÁÁ
+"è¯­æ³•é«˜äº®
 syntax on
 
-"Ê¹ÓÃvimµÄ¼üÅÌÄ£Ê½
+"ä½¿ç”¨vimçš„é”®ç›˜æ¨¡å¼
 "set nocompatible
 
-"²»ĞèÒª±¸·İ
+"ä¸éœ€è¦å¤‡ä»½
 set nobackup
 
-"Ã»ÓĞ±£´æ»òÎÄ¼şÖ»¶ÁÊ±µ¯³öÈ·ÈÏ
+"æ²¡æœ‰ä¿å­˜æˆ–æ–‡ä»¶åªè¯»æ—¶å¼¹å‡ºç¡®è®¤
 set confirm
 
-"Êó±ê¿ÉÓÃ
+"é¼ æ ‡å¯ç”¨
 set mouse=a
 
-"tabËõ½ø
+"tabç¼©è¿›
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set smarttab
 
-"ÎÄ¼ş×Ô¶¯¼ì²âÍâ²¿¸ü¸Ä
+"æ–‡ä»¶è‡ªåŠ¨æ£€æµ‹å¤–éƒ¨æ›´æ”¹
 set autoread
 
-"cÎÄ¼ş×Ô¶¯Ëõ½ø
+"cæ–‡ä»¶è‡ªåŠ¨ç¼©è¿›
 set cindent
 
-"×Ô¶¯¶ÔÆë
+"è‡ªåŠ¨å¯¹é½
 set autoindent
 
 set diffopt=context:1
 
-"ÖÇÄÜËõ½ø
+"æ™ºèƒ½ç¼©è¿›
 set smartindent
 
-"¸ßÁÁ²éÕÒÆ¥Åä
+"é«˜äº®æŸ¥æ‰¾åŒ¹é…
 set hlsearch
 
-"±³¾°É«
+"èƒŒæ™¯è‰²
 "set background=dark
 colorscheme murphy
 
-"ÏÔÊ¾Æ¥Åä
+"æ˜¾ç¤ºåŒ¹é…
 set showmatch
 
-"ÏÔÊ¾±ê³ß£¬¾ÍÊÇÔÚÓÒÏÂ½ÇÏÔÊ¾¹â±êÎ»ÖÃ
+"æ˜¾ç¤ºæ ‡å°ºï¼Œå°±æ˜¯åœ¨å³ä¸‹è§’æ˜¾ç¤ºå…‰æ ‡ä½ç½®
 set ruler
 
-"È¥³ıviµÄÒ»ÖÂĞÔ
+"å»é™¤viçš„ä¸€è‡´æ€§
 set nocompatible
 
-"ÔÊĞíÕÛµş
+"å…è®¸æŠ˜å 
 set foldenable
-"""""""""""""""""ÉèÖÃÕÛµş"""""""""""""""""""""
+"""""""""""""""""è®¾ç½®æŠ˜å """""""""""""""""""""
 "
-"¸ù¾İÓï·¨ÕÛµş
+"æ ¹æ®è¯­æ³•æŠ˜å 
 "set fdm=syntax
 
-"¸ù¾İËõ½øÕÛµş
+"æ ¹æ®ç¼©è¿›æŠ˜å 
 set fdm=indent
 
-"ÊÖ¶¯ÕÛµş
+"æ‰‹åŠ¨æŠ˜å 
 "set fdm=manual
 
-"ÉèÖÃ¼üÅÌÓ³Éä£¬Í¨¹ı¿Õ¸ñÉèÖÃÕÛµş
+"è®¾ç½®é”®ç›˜æ˜ å°„ï¼Œé€šè¿‡ç©ºæ ¼è®¾ç½®æŠ˜å 
 "nnoremap <space> @=((foldclosed(line('.')<0)?'zc':'zo'))<CR>
 """"""""""""""""""""""""""""""""""""""""""""""
-"²»ÒªÉÁË¸
+"ä¸è¦é—ªçƒ
 set novisualbell
 
-"Æô¶¯ÏÔÊ¾×´Ì¬ĞĞ
+"å¯åŠ¨æ˜¾ç¤ºçŠ¶æ€è¡Œ
 set laststatus=2
 
-"Ç³É«ÏÔÊ¾µ±Ç°ĞĞ
+"æµ…è‰²æ˜¾ç¤ºå½“å‰è¡Œ
 autocmd InsertLeave * se nocul
 
-"ÓÃÇ³É«¸ßÁÁµ±Ç°ĞĞ
+"ç”¨æµ…è‰²é«˜äº®å½“å‰è¡Œ
 autocmd InsertEnter * se cul
 
-"ÏÔÊ¾ÊäÈëµÄÃüÁî
+"æ˜¾ç¤ºè¾“å…¥çš„å‘½ä»¤
 set showcmd
 
-"±»·Ö¸î´°¿ÚÖ®¼äÏÔÊ¾¿Õ°×
+"è¢«åˆ†å‰²çª—å£ä¹‹é—´æ˜¾ç¤ºç©ºç™½
 set fillchars=vert:/
 
 set fillchars=stl:/
 
 set fillchars=stlnc:/
 
+set encoding=utf-8
+
 
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-" => ²å¼ş¹ÜÀívundleÅäÖÃ
+" => æ’ä»¶ç®¡ç†vundleé…ç½®
 """"""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-" windowsÏµÍ³Â·¾¶
+" windowsç³»ç»Ÿè·¯å¾„
 set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
 call vundle#begin('$USERPROFILE/vimfiles/bundle/')
 
-" Ô­ÎÄ¼şµÄÅäÖÃ£¬ÊÊºÏlinux¡¢mac
+" åŸæ–‡ä»¶çš„é…ç½®ï¼Œé€‚åˆlinuxã€mac
 " set rtp+=~/.vim/bundle/Vundle.vim
 " call vundle#begin()
 
@@ -155,7 +157,7 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 
-" °²×°markdown²å¼ş
+" å®‰è£…markdownæ’ä»¶
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
@@ -175,7 +177,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line 
 
 filetype off  
-" ´Ë´¦¹æ¶¨VundleµÄÂ·¾¶  
+" æ­¤å¤„è§„å®šVundleçš„è·¯å¾„  
 set rtp+=$VIM/vimfiles/bundle/vundle/  
 call vundle#rc('$VIM/vimfiles/bundle/')  
 Bundle 'gmarik/vundle'  
