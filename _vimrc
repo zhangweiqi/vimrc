@@ -133,75 +133,29 @@ set encoding=utf-8
 
 
 
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" => 插件管理vundle配置
-""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-" windows系统路径
-set rtp+=$HOME/vimfiles/bundle/Vundle.vim/
-call vundle#begin('$USERPROFILE/vimfiles/bundle/')
-
-" 原文件的配置，适合linux、mac
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-
-" 安装markdown插件
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line 
-
-filetype off  
-" 此处规定Vundle的路径  
-set rtp+=$VIM/vimfiles/bundle/vundle/  
-call vundle#rc('$VIM/vimfiles/bundle/')  
-Bundle 'gmarik/vundle'  
-filetype plugin indent on  
+"解决gvim菜单乱码问题
+set fileencodings=utf-8,chinese,latin-1  
   
-" original repos on github<br>Bundle 'mattn/zencoding-vim'  
-Bundle 'drmingdrmer/xptemplate'  
-   
-" vim-scripts repos  
-Bundle 'L9'  
-Bundle 'FuzzyFinder'  
-Bundle 'bufexplorer.zip'  
-Bundle 'taglist.vim'  
-Bundle 'Mark'  
-Bundle 'The-NERD-tree'  
-Bundle 'matrix.vim'  
-Bundle 'closetag.vim'  
-Bundle 'The-NERD-Commenter'  
-Bundle 'matchit.zip'  
-Bundle 'AutoComplPop'  
-Bundle 'jsbeautify'  
-Bundle 'YankRing.vim'  
-   
-filetype plugin indent on     " required!   
+if has("win32")  
+  
+ set fileencoding=chinese  
+  
+else  
+  
+ set fileencoding=utf-8  
+  
+endif  
+  
+"解决菜单乱码  
+  
+source $VIMRUNTIME/delmenu.vim  
+  
+source $VIMRUNTIME/menu.vim  
+  
+"解决consle输出乱码  
+  
+language messages zh_CN.utf-8  
+
 
 
 
